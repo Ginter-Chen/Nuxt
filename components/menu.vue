@@ -11,12 +11,12 @@
   margin-right: 20px;
 }
 </style>
-<script>
-export default {
-    methods: {
-        goTo(path) {
-            this.$router.push(path)
-        }
-    }
-}
+<script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const goTo = (path) => {
+    router.push(path);
+};
 </script>
